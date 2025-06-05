@@ -1,63 +1,42 @@
 import React from 'react';
-
+import "./styles/navbar.css"
 const Navbar = () => {
   const handleAboutChange = (e) => {
     const value = e.target.value;
 
     if (value) {
-      // Check if the value is a URL
       if (value.startsWith('http')) {
-        window.open(value, '_blank'); // Open resume in new tab
+        window.open(value, '_blank');
       } else {
-        window.location.href = `#${value}`; // Scroll to section
+        window.location.href = `#${value}`;
       }
 
-      e.target.selectedIndex = 0; // Reset to placeholder
+      e.target.selectedIndex = 0;
     }
   };
 
   return (
-    <nav style={styles.navbar}>
-      <a href="#" style={styles.link}>Home</a>
+    <nav className="navbar">
+  <a href="#" className="nav-link">Home</a>
 
-      <select onChange={handleAboutChange} style={styles.select} defaultValue="">
-        <option value="" disabled>About</option>
-        <option value="education">Education</option>
-        <option value="experience">Experience</option>
-        <option value="interests">Interests</option>
-        <option value="skills">Skills</option>
-  <option value="https://drive.google.com/file/d/1EoExLmv6PEH357_aLEi94TpT_NlKa95n/view?usp=drive_link">View My Resume</option>
+  <select onChange={handleAboutChange} className="nav-select" defaultValue="">
+    <option value="" disabled>About</option>
+    <option value="education">Education</option>
+    <option value="experience">Experience</option>
+    <option value="interests">Interests</option>
+    <option value="skills">Skills</option>
+    <option value="https://drive.google.com/file/d/1EoExLmv6PEH357_aLEi94TpT_NlKa95n/view?usp=drive_link">
+      View My Resume
+    </option>
+  </select>
 
-      </select>
-
-      <a href="#projects" style={styles.link}>Projects</a>
-      <a href="#contact" style={styles.link}>Contact</a>
-    </nav>
+  <a href="#projects" className="nav-link">Projects</a>
+  <a href="#contact" className="nav-link">Contact</a>
+</nav>
   );
 };
 
-const styles = {
-  navbar: {
-    
-    position: 'fixed',         // Sticks the navbar to top
-    top: 0,                    // Aligns to top of viewport
-    width: '100%',             // Full width
-    zIndex: 1000,   
-    display: 'flex',
-    gap: '20px',
-    padding: '10px',
-    backgroundColor: '#f0f0f0',
-    alignItems: 'center',
-    justifyContent: 'space-around'
-  },
-  link: {
-    textDecoration: 'none',
-    color: '#333',
-  },
-  select: {
-    backgroundColor: '#f0f0f0',
-    border:'none'
-  }
-};
+// // Media query using inline styles (optional suggestion):
+// Use a CSS file or styled-components for better media query support.
 
 export default Navbar;

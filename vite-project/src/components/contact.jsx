@@ -77,7 +77,7 @@ const Contact = () => {
 
         {status === "success" && (
           <span style={{ ...styles.msg, color: "#2e7d32" }}>
-                thank you!
+            thank you!
           </span>
         )}
         {status === "error" && (
@@ -98,8 +98,8 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundColor:'#FFDAB9'
-    
+    backgroundColor: '#FFDAB9'
+
   },
   heading: {
     fontSize: "2rem",

@@ -11,8 +11,8 @@ function Projects() {
             <h3 style={styles.ProjectTitle} className="text-xl font-semibold">{project.title}</h3>
             <p style={styles.ProjectDescription} className="mb-2">{project.description}</p>
             <div>
-              <a href={project.liveLink} style={styles.link} className="text-blue-500 mr-4" target="_blank" rel="noreferrer">Live Demo</a>
-              <a href={project.githubLink} style={styles.link} className="text-blue-500" target="_blank" rel="noreferrer">GitHub Link</a>
+              <a href={project.liveLink} style={styles.link} className="text-blue-500 mr-4" target="_blank" rel="noreferrer">Demo</a>
+              <a href={project.githubLink} style={styles.link} className="text-blue-500" target="_blank" rel="noreferrer">GitHub</a>
               <br /><br />
             </div>
           </div>

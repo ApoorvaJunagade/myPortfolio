@@ -7,38 +7,42 @@ import Projects from "./components/Projects";
 import Skills from "./components/skills";
 import Contact from "./components/contact";
 function App() {
-  return ( 
-  <div style={{backgroundColor:"lightgray"}}>
- 
-  <Navbar/>
-  <Hero/>
-  <div id="education">
-  <Education />
-</div>
+  return (
+    <div style={{ backgroundColor: "lightgray" }}>
 
-  <div id="experience">
-  <Experience />
-</div> 
+      <div style={{ backgroundColor: "lightgray", paddingTop: "100px" }}>
+      <Navbar />
+      <Hero />
+      {/* Rest of your content */}
+    
+      <div id="education">
+        <Education />
+      </div>
 
-<div id="interests">
-  <Interests />
-</div>
+      <div id="experience">
+        <Experience />
+      </div>
 
-
-<div id="skills">
-  <Skills/>
-</div>
-
-<div id="projects">
-  <Projects />
-</div>
+      <div id="interests">
+        <Interests />
+      </div>
 
 
-<div id="contact">
-  <Contact />
-</div>
-  </div>
-   );
+      <div id="skills">
+        <Skills />
+      </div>
+
+      <div id="projects">
+        <Projects />
+      </div>
+
+
+      <div id="contact">
+        <Contact />
+      </div>
+    </div>
+    </div>
+  );
 }
 
 export default App;

@@ -1,9 +1,9 @@
 import Navbar from "./navbar";
 
 function Experience() {
-    return (
+  return (
     <section id="experience" style={styles.section}>
-    
+
       <h2 >Work Experience</h2>
 
       <div style={styles.job}>
@@ -40,13 +40,13 @@ const styles = {
   section: {
     fontFamily: 'Poppins, sans-serif',
     display: 'flex',
-    flexDirection:'column',
+    flexDirection: 'column',
     padding: '40px',
 
   },
   job: {
     marginBottom: '30px',
-        marginLeft:'27%',            // Full height for vertical centering
+    marginLeft: '27%',            // Full height for vertical centering
   }
 };
 
